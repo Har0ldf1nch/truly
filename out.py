@@ -1,0 +1,21 @@
+import requests
+import urllib
+
+
+site = raw_input('Page URL:')
+check = requests.get(site).status_code
+if check==200:
+ print 'Connection Succesfull'
+ web_code = urllib.urlopen(site).read()
+ if 'wordpress' in web_code:
+  print 'Processing...'
+  site = site + '/?author=1'
+  print (site)
+ else:
+  print 'Its not a Wordpress site'
+
+else: 
+ print 'cannot reach webpage'
+	
+
+
