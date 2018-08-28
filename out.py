@@ -9,10 +9,11 @@ if check==200:
  web_code = urllib.urlopen(site).read()
  if 'wordpress' in web_code:
   print 'Processing...'
+  print 'Its a Wordpress Site'
   site = site + '/?author=1'
   print (site)
  else:
-  print 'Its not a Wordpress site'
+  print 'Its not a Wordpress Site'
 
 else: 
  print 'cannot reach webpage'
