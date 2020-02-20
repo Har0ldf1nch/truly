@@ -7,7 +7,7 @@ check = requests.get(site).status_code
 if check==200:
  print 'Connection Succesfull'
  web_code = urllib.urlopen(site).read()
- if 'wordpress' in web_code:
+ if 'WordPress' in web_code:
   print 'Processing...'
   print 'Its a Wordpress Site'
   site = site + '/?author=1'
